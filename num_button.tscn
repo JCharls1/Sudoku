@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bltpm40i0lp6h"]
+
+[ext_resource type="Script" path="res://num_button.gd" id="1_qfcy5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2emub"]
+bg_color = Color(0.917647, 0.721569, 0.988235, 1)
+
+[node name="num_button" type="Button"]
+custom_minimum_size = Vector2(40, 40)
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_2emub")
+script = ExtResource("1_qfcy5")

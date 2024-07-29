@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://bf5hcaregqswt"]
+
+[ext_resource type="Script" path="res://cell.gd" id="1_pt4iw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ortu"]
+bg_color = Color(1, 1, 1, 0.556863)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ha4rw"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.930092, 0.737358, 0.823581, 1)
+
+[node name="Button" type="Button"]
+custom_minimum_size = Vector2(50, 50)
+offset_right = 8.0
+offset_bottom = 8.0
+mouse_default_cursor_shape = 2
+text = "w"
+flat = true
+script = ExtResource("1_pt4iw")
+
+[node name="BG" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0)
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_5ortu")
+
+[node name="Border" type="Panel" parent="."]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_ha4rw")
+
+[connection signal="pressed" from="." to="." method="draw_x"]

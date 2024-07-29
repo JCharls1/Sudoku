@@ -1,0 +1,115 @@
+[gd_scene load_steps=4 format=3 uid="uid://dms266rp2j7nk"]
+
+[ext_resource type="PackedScene" uid="uid://bltpm40i0lp6h" path="res://num_button.tscn" id="1_fv7yx"]
+[ext_resource type="Script" path="res://main.gd" id="1_vng76"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tibwg"]
+bg_color = Color(0.874908, 0.465241, 0.408434, 1)
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vng76")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.169245, 0.169245, 0.169245, 1)
+
+[node name="RestartButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -87.0
+offset_top = -59.0
+offset_right = 91.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_tibwg")
+text = "Restart"
+
+[node name="Cells" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -18.0
+offset_top = 24.0
+offset_right = 22.0
+offset_bottom = 56.0
+grow_horizontal = 2
+columns = 9
+
+[node name="Buttons" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -196.0
+offset_top = -120.0
+offset_right = 196.0
+offset_bottom = -79.0
+grow_horizontal = 2
+grow_vertical = 0
+columns = 9
+
+[node name="num_button" parent="Buttons" instance=ExtResource("1_fv7yx")]
+layout_mode = 2
+text = "1"
+
+[node name="num_button2" parent="Buttons" instance=ExtResource("1_fv7yx")]
+layout_mode = 2
+text = "2"
+
+[node name="num_button3" parent="Buttons" instance=ExtResource("1_fv7yx")]
+layout_mode = 2
+text = "3"
+
+[node name="num_button4" parent="Buttons" instance=ExtResource("1_fv7yx")]
+layout_mode = 2
+text = "4"
+
+[node name="num_button5" parent="Buttons" instance=ExtResource("1_fv7yx")]
+layout_mode = 2
+text = "5"
+
+[node name="num_button6" parent="Buttons" instance=ExtResource("1_fv7yx")]
+layout_mode = 2
+text = "6"
+
+[node name="num_button7" parent="Buttons" instance=ExtResource("1_fv7yx")]
+layout_mode = 2
+text = "7"
+
+[node name="num_button8" parent="Buttons" instance=ExtResource("1_fv7yx")]
+layout_mode = 2
+text = "8"
+
+[node name="num_button9" parent="Buttons" instance=ExtResource("1_fv7yx")]
+layout_mode = 2
+text = "9"
+
+[connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="Buttons/num_button" to="." method="_on_click_num"]
+[connection signal="pressed" from="Buttons/num_button2" to="." method="_on_click_num2"]
+[connection signal="pressed" from="Buttons/num_button3" to="." method="_on_click_num3"]
+[connection signal="pressed" from="Buttons/num_button4" to="." method="_on_click_num4"]
+[connection signal="pressed" from="Buttons/num_button5" to="." method="_on_click_num5"]
+[connection signal="pressed" from="Buttons/num_button6" to="." method="_on_click_num6"]
+[connection signal="pressed" from="Buttons/num_button7" to="." method="_on_click_num7"]
+[connection signal="pressed" from="Buttons/num_button8" to="." method="_on_click_num8"]
+[connection signal="pressed" from="Buttons/num_button9" to="." method="_on_click_num9"]
