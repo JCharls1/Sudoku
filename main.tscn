@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://main.gd" id="1_vng76"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tibwg"]
-bg_color = Color(0.874908, 0.465241, 0.408434, 1)
+bg_color = Color(0.759854, 0.549546, 0.374783, 1)
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -24,6 +24,15 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.169245, 0.169245, 0.169245, 1)
 
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.169245, 0.169245, 0.169245, 1)
+
 [node name="RestartButton" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 7
@@ -31,14 +40,46 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -87.0
+offset_left = -68.0
 offset_top = -59.0
-offset_right = 91.0
+offset_right = 110.0
 offset_bottom = -15.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/normal = SubResource("StyleBoxFlat_tibwg")
 text = "Restart"
+
+[node name="RestartButton2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -260.0
+offset_top = -60.0
+offset_right = -82.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_tibwg")
+text = "Check"
+
+[node name="RestartButton4" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 127.0
+offset_top = -61.0
+offset_right = 305.0
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_tibwg")
+text = "Solve"
 
 [node name="Cells" type="GridContainer" parent="."]
 layout_mode = 1
@@ -104,6 +145,7 @@ layout_mode = 2
 text = "9"
 
 [connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="RestartButton4" to="." method="solve_button"]
 [connection signal="pressed" from="Buttons/num_button" to="." method="_on_click_num"]
 [connection signal="pressed" from="Buttons/num_button2" to="." method="_on_click_num2"]
 [connection signal="pressed" from="Buttons/num_button3" to="." method="_on_click_num3"]

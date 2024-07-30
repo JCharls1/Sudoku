@@ -19,4 +19,11 @@ func draw_x():
 	cell_value = str(main.current_button)
 	tween.tween_property(self, "self_modulate:a", 1, 0.5)
 	cell_updated.emit(self)
-	print(self.get_name())
+
+func draw_num(num):
+	var tween = get_tree().create_tween()
+	self_modulate = Color("#00ffff")
+	self_modulate.a = 0
+	text = str(num)
+	cell_value = str(num)
+	tween.tween_property(self, "self_modulate:a", 1, 0.5)
