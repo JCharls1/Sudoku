@@ -144,38 +144,6 @@ text = "8"
 layout_mode = 2
 text = "9"
 
-[node name="Window" type="Window" parent="."]
-initial_position = 1
-size = Vector2i(250, 250)
-visible = false
-
-[node name="Camera2D" type="Camera2D" parent="Window"]
-
-[node name="Label" type="Label" parent="Window/Camera2D"]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -54.5
-offset_right = 54.5
-offset_bottom = 23.0
-grow_horizontal = 2
-text = "Puzzle Solved!"
-
-[node name="Button" type="Button" parent="Window/Camera2D"]
-layout_direction = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -18.0
-offset_top = -15.5
-offset_right = 18.0
-offset_bottom = 15.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "asd"
-
 [connection signal="pressed" from="restart_button" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="check_button" to="." method="check_button"]
 [connection signal="pressed" from="solve_button" to="." method="solve_button"]
@@ -188,4 +156,3 @@ text = "asd"
 [connection signal="pressed" from="Buttons/num_button7" to="." method="_on_click_num7"]
 [connection signal="pressed" from="Buttons/num_button8" to="." method="_on_click_num8"]
 [connection signal="pressed" from="Buttons/num_button9" to="." method="_on_click_num9"]
-[connection signal="close_requested" from="Window" to="." method="_on_window_close_requested"]

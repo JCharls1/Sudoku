@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://num_button.gd" id="1_qfcy5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2emub"]
-bg_color = Color(0.917647, 0.721569, 0.988235, 1)
+bg_color = Color(0.617208, 0.723303, 0.778405, 1)
 
 [node name="num_button" type="Button"]
 custom_minimum_size = Vector2(40, 40)

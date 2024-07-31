@@ -11,7 +11,7 @@ border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
-border_color = Color(0.930092, 0.737358, 0.823581, 1)
+border_color = Color(0.495741, 0.464731, 0.476748, 1)
 
 [node name="Button" type="Button"]
 custom_minimum_size = Vector2(50, 50)
