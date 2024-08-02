@@ -4,7 +4,6 @@ const Cell = preload("res://Cell.tscn")
 const _Button = preload("res://num_button.tscn")
 
 var cells : Array = []
-var a = "nigga"
 var current_button : int = 1
 var grid = []
 var puzzle = []
