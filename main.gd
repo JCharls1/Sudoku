@@ -23,6 +23,20 @@ func _ready():
 	print(_is_valid_sudoku(puzzle))
 	#popup.show()
 
+func _on_restart_button_pressed():
+	get_tree().reload_current_scene()
+
+func solve_button():
+	put_in_grid(grid)
+
+func check_button():
+	fill_check_grid()
+	if(_is_valid_sudoku(check_grid)):
+		popup.show()
+		print("valid")
+	else:
+		print("invalid")
+
 func initialize_grid():
 	for cell_count in range(9*9):
 		var cell = Cell.instantiate()
@@ -65,19 +79,6 @@ func get_current_board_state():
 		arr.append(cells[n].cell_value)
 	return arr
 
-func _on_restart_button_pressed():
-	get_tree().reload_current_scene()
-
-func solve_button():
-	put_in_grid(grid)
-
-func check_button():
-	fill_check_grid()
-	if(_is_valid_sudoku(check_grid)):
-		popup.show()
-		print("valid")
-	else:
-		print("invalid")
 
 func fill_check_grid():
 	var a = 0
