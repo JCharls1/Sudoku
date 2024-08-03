@@ -1,6 +1,6 @@
 extends Control
 
-const Cell = preload("res://Cell.tscn")
+const Cell = preload("res://cell.tscn")
 const _Button = preload("res://num_button.tscn")
 
 var cells : Array = []

@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dms266rp2j7nk"]
+[gd_scene load_steps=4 format=3 uid="uid://dms266rp2j7nk"]
 
 [ext_resource type="PackedScene" uid="uid://bltpm40i0lp6h" path="res://num_button.tscn" id="1_fv7yx"]
 [ext_resource type="Script" path="res://main.gd" id="1_vng76"]
-[ext_resource type="PackedScene" uid="uid://bf5hcaregqswt" path="res://cell.tscn" id="3_6q8ul"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tibwg"]
 bg_color = Color(0.759854, 0.549546, 0.374783, 1)
@@ -176,13 +175,6 @@ offset_bottom = 15.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "asd"
-
-[node name="Button" parent="." instance=ExtResource("3_6q8ul")]
-layout_mode = 0
-offset_left = 177.0
-offset_top = 79.0
-offset_right = 227.0
-offset_bottom = 129.0
 
 [connection signal="pressed" from="restart_button" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="check_button" to="." method="check_button"]
